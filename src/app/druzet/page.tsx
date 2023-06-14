@@ -10,7 +10,6 @@ const Druzet = () => {
   return (
     <div className='text-center'>
         
-        <Navbar />
         <BannerPic 
   mediaSource="/druzet.png" 
   mediaType="image" 
@@ -85,7 +84,6 @@ const Druzet = () => {
   </ul>
     </div>
     </div>
-<Footer />
     </div>
   )
 }

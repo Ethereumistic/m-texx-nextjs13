@@ -6,6 +6,7 @@ import BannerPic from './components/BannerPic';
 import './globals.css';
 import Footer from './components/Footer';
 
+
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -14,8 +15,7 @@ export default function Home() {
   };
   return (
     <div>
-      <Navbar />
-      <BannerPic 
+            <BannerPic 
   mediaSource="/Bg-Video2.mp4" 
   mediaType="video" 
   headingText="Рециклиране на текстил: Втори живот за стари дрехи, първа стъпка към..." 
@@ -70,9 +70,6 @@ export default function Home() {
 
 />
 
-<div className='text-center'>
-<Footer />
-</div>
 
       </div>
   )

@@ -1,5 +1,7 @@
 import './globals.css'
 import { Inter, Oswald, Roboto_Mono } from 'next/font/google'
+import Navbar from './navbar/page'
+import Footer from './components/Footer'
  
 const inter = Inter({
   subsets: ['latin'],
@@ -26,7 +28,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${roboto_mono.variable} ${oswald.variable}`}>
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+        <Footer />
+        </body>
     </html>
   )
 }

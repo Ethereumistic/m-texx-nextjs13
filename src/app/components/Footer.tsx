@@ -4,7 +4,7 @@ import { FaFacebook, FaInstagram, FaTiktok, FaYoutube } from 'react-icons/fa';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-white py-4">
+    <footer className="bg-white py-4 text-center">
       <div className="container mx-auto flex flex-wrap items-center justify-center">
         <div className="w-full mb-4">
           <nav className="flex flex-wrap justify-center mt-8">

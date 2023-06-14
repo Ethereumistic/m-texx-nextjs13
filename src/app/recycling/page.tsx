@@ -16,9 +16,7 @@ const jiznenCikul = ['опазване на природните ресурси 
 const Recycling: React.FC = () => {
   return (
     <div className='text-center'>
-        
-            <Navbar />
-            <BannerPic 
+       <BannerPic 
   mediaSource="/recycling-bg.png" 
   mediaType="image" 
   headingText="Рециклиране на текстил: Втори живот за стари дрехи, първа стъпка към..." 
@@ -190,10 +188,8 @@ const Recycling: React.FC = () => {
       
       
 
-<div className="p-4 grid grid-cols-3 gap-4">
-
+    <div className="p-4 grid grid-cols-3 gap-4">
     </div>
-    <Footer />
     </div>
   )
 }
