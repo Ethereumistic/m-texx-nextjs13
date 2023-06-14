@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '../navbar/page'
-import BannerPic from '../bannerpic/page'
+import BannerPic from '../components/BannerPic'
 import Image from 'next/image'
 import PhotoGallery from '../components/PhotoGallery';
 import Footer from '../components/Footer';

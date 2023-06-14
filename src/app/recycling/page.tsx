@@ -2,7 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Navbar from '../navbar/page';
-import BannerPic from '../bannerpic/page';
+import BannerPic from '../components/BannerPic';
 import TextBox from '../components/TextBox';
 import 'tailwindcss/tailwind.css';
 import '../globals.css';

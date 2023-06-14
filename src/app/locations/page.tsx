@@ -1,5 +1,5 @@
 import React from 'react'
-import BannerPic from '../bannerpic/page'
+import BannerPic from '../components/BannerPic'
 import Navbar from '../navbar/page'
 import Image from 'next/image'
 
