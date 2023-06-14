@@ -113,13 +113,13 @@ const Navbar = () => {
               <Link href="/recycling" className={`text-green-800 hover:text-green-300 block px-3 py-2 rounded-md text-base transition-all duration-500 ${scroll ? 'font-extrabold' : 'font-black'}`}>
                 РЕЦИКЛИРАНЕ
               </Link>
-              <Link href="/" className={`text-green-800 hover:text-green-300 block px-3 py-2 rounded-md text-base transition-all duration-500 ${scroll ? 'font-extrabold' : 'font-black'}`}>
+              <Link href="/locations" className={`text-green-800 hover:text-green-300 block px-3 py-2 rounded-md text-base transition-all duration-500 ${scroll ? 'font-extrabold' : 'font-black'}`}>
                 ЛОКАЦИИ
               </Link>
-              <Link href="/" className={`text-green-800 hover:text-green-300 block px-3 py-2 rounded-md text-base transition-all duration-500 ${scroll ? 'font-extrabold' : 'font-black'}`}>
+              <Link href="/partners" className={`text-green-800 hover:text-green-300 block px-3 py-2 rounded-md text-base transition-all duration-500 ${scroll ? 'font-extrabold' : 'font-black'}`}>
                 PARTNERS
               </Link>
-              <Link href="/" className={`text-green-800 hover:text-green-300 block px-3 py-2 rounded-md text-base transition-all duration-500 ${scroll ? 'font-extrabold' : 'font-black'}`}>
+              <Link href="/druzet" className={`text-green-800 hover:text-green-300 block px-3 py-2 rounded-md text-base transition-all duration-500 ${scroll ? 'font-extrabold' : 'font-black'}`}>
                 ДРУЗЕТ
               </Link>
         </div>

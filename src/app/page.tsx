@@ -3,7 +3,6 @@ import Image from 'next/image';
 import { useState } from 'react';
 import Navbar from './navbar/page';
 import BannerPic from './bannerpic/page';
-import Nav from './nav/page';
 import SavingPlanet from './savingplanet/page';
 import './globals.css';
 import Footer from './components/Footer';
@@ -17,7 +16,6 @@ export default function Home() {
   return (
     <div>
       <Navbar />
-      {/* <Nav /> */}
       <BannerPic 
   mediaSource="/Bg-Video2.mp4" 
   mediaType="video" 
