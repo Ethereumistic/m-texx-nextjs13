@@ -1,7 +1,9 @@
+"use client"
 import React from 'react'
 import BannerPic from '../components/BannerPic'
 import Navbar from '../navbar/page'
 import Image from 'next/image'
+import MapContainer from '../components/MapContainer'
 
 const Locations = () => {
   return (
@@ -43,6 +45,7 @@ const Locations = () => {
   />
 </div>
 
+    <MapContainer />
 
     </div>
   )
