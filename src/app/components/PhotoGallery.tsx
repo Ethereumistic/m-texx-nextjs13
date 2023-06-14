@@ -1,6 +1,7 @@
 "use client"
 import { useState, useEffect } from 'react';
 import { useSwipeable } from 'react-swipeable';
+import Image from 'next/image';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 const PhotoGallery: React.FC<{ images: string[] }> = ({ images }) => {
@@ -29,13 +30,17 @@ const PhotoGallery: React.FC<{ images: string[] }> = ({ images }) => {
 
   return (
     <div {...handlers} className="relative flex flex-col items-center justify-center w-full h-64 sm:h-96 sm:w-3/5 mx-auto rounded-xl overflow-hidden">
-      <img
-        src={images[activeImage]}
-        alt={`Gallery Image ${activeImage}`}
-        className="absolute inset-0 w-full h-full object-cover"
-      />
+      <div className="absolute inset-0 z-0">
+        <Image
+          src={images[activeImage]}
+          alt={`Gallery Image ${activeImage}`}
+          layout="fill"
+          objectFit="cover"
+          priority={true}
+        />
+      </div>
 
-      <div className="absolute inset-0 flex justify-between items-center px-6">
+      <div className="absolute inset-0 flex justify-between items-center px-6 z-10">
         <FaChevronLeft 
           size={50} 
           onClick={() => handleImageClick("left")} 
@@ -48,7 +53,7 @@ const PhotoGallery: React.FC<{ images: string[] }> = ({ images }) => {
         />
       </div>
 
-      <div className="absolute bottom-0 mb-3 flex justify-center w-full space-x-2">
+      <div className="absolute bottom-0 mb-3 flex justify-center w-full space-x-2 z-10">
         {images.map((_, idx) => (
           <span
             key={idx}
