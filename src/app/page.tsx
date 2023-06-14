@@ -19,7 +19,7 @@ export default function Home() {
       <Navbar />
       {/* <Nav /> */}
       <BannerPic 
-  mediaSource="/background2.mp4" 
+  mediaSource="/Bg-Video2.mp4" 
   mediaType="video" 
   headingText="Рециклиране на текстил: Втори живот за стари дрехи, първа стъпка към..." 
   buttonText="РЕЦИКЛИРАНЕ НА ТЕКСТИЛ" 
