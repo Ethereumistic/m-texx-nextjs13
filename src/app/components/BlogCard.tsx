@@ -1,6 +1,5 @@
 import React from 'react';
 
-// Define the shape of props that BlogCard accepts
 interface BlogCardProps {
   title: string;
   author: {
@@ -10,22 +9,16 @@ interface BlogCardProps {
     };
   };
   coverPhoto: {
-    publishedAt: {
-      createdBy: {
-        id: string;
-      };
-      url: string;
-    };
+    url: string;
   };
   datePublished: string;
   slug: string;
-  key: string;
 }
 
 const BlogCard: React.FC<BlogCardProps> = ({ title, author, coverPhoto, datePublished, slug }) => {
   return (
     <div className="border border-gray-300 p-4 rounded-md mb-4">
-      <img className="w-full h-64 object-cover rounded-md" src={coverPhoto.publishedAt.url} alt="Cover photo" />
+      <img className="w-full h-64 object-cover rounded-md" src={coverPhoto.url} alt="Cover photo" />
       <h2 className="text-xl font-bold mt-2">{title}</h2>
       <div className="flex items-center mt-2">
         <img className="w-8 h-8 rounded-full mr-2" src={author.avatar.url} alt="Author avatar" />

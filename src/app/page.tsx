@@ -7,6 +7,7 @@ import './globals.css';
 import Footer from './components/Footer';
 
 
+
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
 

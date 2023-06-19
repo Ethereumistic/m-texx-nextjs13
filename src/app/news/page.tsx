@@ -1,7 +1,5 @@
 "use client"
 import React from 'react'
-import Navbar from '../navbar/page'
-import TextBox from '../components/TextBox'
 import BlogCard from '../components/BlogCard'
 import { GraphQLClient, gql } from 'graphql-request'
 
@@ -14,9 +12,6 @@ const QUERY = gql`
     title,
     datePublished,
     slug,
-    content {
-      html
-    }
     author{
       name,
       avatar{
@@ -24,25 +19,16 @@ const QUERY = gql`
       }
     }
     coverPhoto{
-      publishedAt{
-        createdBy{
-          id
-        }
-        url
-      }
+      url
     }
   }
 }`
 
-// define your interfaces here
 interface Post {
   id: string;
   title: string;
   datePublished: string;
   slug: string;
-  content: {
-    html: string;
-  };
   author: {
     name: string;
     avatar: {
@@ -50,12 +36,7 @@ interface Post {
     };
   };
   coverPhoto: {
-    publishedAt: {
-      createdBy: {
-        id: string;
-      };
-      url: string;
-    };
+    url: string;
   };
 }
 
@@ -74,34 +55,30 @@ export async function getStaticProps() {
   };
 }
 
-
-
-// define the News component
-export default function News({ posts }: any) {
-  // If posts are not available or not an array, display a message
+export default function News({ posts }: { posts: Post[] }) {
   if (!posts || !Array.isArray(posts)) {
     return <div>Loading or no posts available...</div>;
   }
 
-  // If posts are available, map over them and display a BlogCard for each post
   return (
     <div className=''>
       <h1 className='text-3xl font-oswald mt-40'>Blog</h1>
       <div>
-        {posts.map((post: any, index: number) => (
+        {posts.map((post: Post) => (
           <BlogCard 
             title={post.title} 
             author={post.author} 
-            coverPhoto={post.coverPhoto} 
-            key={post.key} // for now, use index as key
+            coverPhoto={post.coverPhoto}
             datePublished={post.datePublished} 
             slug={post.slug} 
+            key={post.id} 
           />
         ))}
       </div>
     </div>
   )
 }
+
 
 
 
